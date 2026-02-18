@@ -1,0 +1,1193 @@
+[
+  {
+    "Id": 1,
+    "Intitule": "Qu'est-ce qu'une variable en informatique ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Id": 1,
+      "Option1": "Une valeur qui ne change jamais",
+      "Option2": "Un espace de stockage nommé pour une valeur",
+      "Option3": "Une erreur dans le code",
+      "Option4": null
+    },
+    "Reponse": "Un espace de stockage nommé pour une valeur",
+    "Indice": "Pense à une boîte avec une étiquette."
+  },
+  {
+    "Id": 2,
+    "Intitule": "Quel est le résultat de l'opération : 10 modulo 3 ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "1",
+    "Indice": "C'est le reste de la division euclidienne."
+  },
+  {
+    "Id": 3,
+    "Intitule": "Quelle structure de contrôle permet de répéter une action tant qu'une condition est vraie ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Si ... Alors (If)",
+      "Option2": "Tant que (While)",
+      "Option3": "Pour (For)",
+      "Option4": "Selon (Switch)"
+    },
+    "Reponse": "Tant que (While)",
+    "Indice": "On l'utilise quand on ne connaît pas le nombre exact d'itérations à l'avance."
+  },
+  {
+    "Id": 4,
+    "Intitule": "En logique booléenne, si A est Vrai et B est Faux, que vaut (A ET B) ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Faux",
+    "Indice": "Pour qu'un ET soit vrai, tout doit être vrai."
+  },
+  {
+    "Id": 5,
+    "Intitule": "Dans un tableau indexé à partir de 0, quel est l'index du 3ème élément ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "1",
+      "Option2": "2",
+      "Option3": "3",
+      "Option4": "0"
+    },
+    "Reponse": "2",
+    "Indice": "Le premier est à 0, le deuxième à 1..."
+  },
+  {
+    "Id": 6,
+    "Intitule": "Comment appelle-t-on une boucle qui ne s'arrête jamais ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Une boucle infinie",
+    "Indice": "C'est souvent dû à une condition qui reste toujours vraie."
+  },
+  {
+    "Id": 7,
+    "Intitule": "Quelle est la particularité d'une structure LIFO (Pile) ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Premier entré, premier sorti",
+      "Option2": "Dernier entré, premier sorti",
+      "Option3": "Accès aléatoire aux éléments",
+      "Option4": null
+    },
+    "Reponse": "Dernier entré, premier sorti",
+    "Indice": "Comme une pile d'assiettes."
+  },
+  {
+    "Id": 8,
+    "Intitule": "Si j'ai une boucle 'Pour i allant de 0 à 4', combien de fois le code s'exécute-t-il ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "5",
+    "Indice": "Compte les valeurs : 0, 1, 2, 3, 4."
+  },
+  {
+    "Id": 9,
+    "Intitule": "Quel type de variable est le plus adapté pour stocker la valeur 'Vrai' ou 'Faux' ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Entier (Integer)",
+      "Option2": "Chaîne (String)",
+      "Option3": "Booléen (Boolean)",
+      "Option4": "Flottant (Float)"
+    },
+    "Reponse": "Booléen (Boolean)",
+    "Indice": "Nommé d'après George Boole."
+  },
+  {
+    "Id": 10,
+    "Intitule": "Quel est le nom de l'algorithme de tri qui compare des éléments adjacents et les échange s'ils sont dans le mauvais ordre ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Tri à bulles",
+    "Indice": "Les plus grands éléments remontent comme des bulles."
+  },
+  {
+    "Id": 11,
+    "Intitule": "Pour qu'une recherche dichotomique fonctionne, le tableau doit impérativement être...",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Rempli d'entiers",
+      "Option2": "Trié",
+      "Option3": "De taille impaire",
+      "Option4": "Vide"
+    },
+    "Reponse": "Trié",
+    "Indice": "On ne peut pas couper en deux efficacement si c'est le désordre."
+  },
+  {
+    "Id": 12,
+    "Intitule": "Comment appelle-t-on une fonction qui s'appelle elle-même ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Récursive",
+    "Indice": "C'est le principe des poupées russes en code."
+  },
+  {
+    "Id": 13,
+    "Intitule": "Quelle complexité temporelle représente le pire cas pour parcourir un tableau simple de taille n ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "O(1)",
+      "Option2": "O(log n)",
+      "Option3": "O(n)",
+      "Option4": "O(n²)"
+    },
+    "Reponse": "O(n)",
+    "Indice": "Si l'élément est tout à la fin, tu dois tout lire."
+  },
+  {
+    "Id": 14,
+    "Intitule": "Dans une fonction, quel mot-clé permet de renvoyer un résultat au programme appelant ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Return",
+    "Indice": "C'est l'inverse des paramètres d'entrée."
+  },
+  {
+    "Id": 15,
+    "Intitule": "Que se passe-t-il si une fonction récursive n'a pas de condition d'arrêt (cas de base) ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Elle renvoie 0",
+      "Option2": "Stack Overflow (Débordement de pile)",
+      "Option3": "Le compilateur la corrige",
+      "Option4": null
+    },
+    "Reponse": "Stack Overflow (Débordement de pile)",
+    "Indice": "La mémoire allouée aux appels de fonction finit par saturer."
+  },
+  {
+    "Id": 16,
+    "Intitule": "En complexité algorithmique, quelle notation est meilleure que O(n) ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "O(log n) ou O(1)",
+    "Indice": "Pense à la dichotomie ou à l'accès direct."
+  },
+  {
+    "Id": 17,
+    "Intitule": "Quel concept de programmation orientée objet permet de créer plusieurs méthodes avec le même nom mais des paramètres différents ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "L'héritage",
+      "Option2": "La surcharge",
+      "Option3": "L'encapsulation",
+      "Option4": "Le polymorphisme"
+    },
+    "Reponse": "La surcharge",
+    "Indice": "Overloading en anglais."
+  },
+  {
+    "Id": 18,
+    "Intitule": "Quelle structure de données utilise le principe FIFO (First In, First Out) ?",
+    "Theme":1,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "File",
+    "Indice": "Comme une file d'attente au cinéma."
+  },
+  {
+    "Id": 19,
+    "Intitule": "Dans un arbre binaire de recherche, où se trouvent les valeurs inférieures à la racine ?",
+    "Theme":1,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Dans le sous-arbre gauche",
+      "Option2": "Dans le sous-arbre droit",
+      "Option3": "À la racine uniquement",
+      "Option4": null
+    },
+    "Reponse": "Dans le sous-arbre gauche",
+    "Indice": "Les plus petits à gauche, les plus grands à droite."
+  },
+  {
+    "Id": 20,
+    "Intitule": "Quel est le nom du problème célèbre qui consiste à trouver le chemin le plus court passant par toutes les villes une seule fois et revenant au point de départ (NP-Complet) ?",
+    "Theme":1,
+    "TypeDeQuestion": 3,
+    "Options": null,
+    "Reponse": "Le problème du voyageur de commerce",
+    "Indice": "Traveling Salesman Problem. C'est un problème d'optimisation combinatoire très difficile."
+  },
+  {
+    "Id": 21,
+    "Intitule": "Comment dit-on 'Chat' en anglais ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Dog",
+      "Option2": "Cat",
+      "Option3": "Bird",
+      "Option4": "Fish"
+    },
+    "Reponse": "Cat",
+    "Indice": "Ça commence par la lettre C."
+  },
+  {
+    "Id": 22,
+    "Intitule": "Quel est le passé simple du verbe 'To go' (Aller) ?",
+    "Theme": 2,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Went",
+    "Indice": "C'est un verbe très irrégulier qui commence par W."
+  },
+  {
+    "Id": 23,
+    "Intitule": "Complétez la phrase : 'She ___ playing football.'",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "are",
+      "Option2": "am",
+      "Option3": "is",
+      "Option4": "be"
+    },
+    "Reponse": "is",
+    "Indice": "C'est la troisième personne du singulier."
+  },
+  {
+    "Id": 24,
+    "Intitule": "Quel est le contraire de 'Hot' (Chaud) ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Cold",
+      "Option2": "Warm",
+      "Option3": "Burn",
+      "Option4": "Ice"
+    },
+    "Reponse": "Cold",
+    "Indice": "Cela ressemble au mot français pour un rhume."
+  },
+  {
+    "Id": 25,
+    "Intitule": "Quel article met-on devant le mot 'Apple' ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "A",
+      "Option2": "An",
+      "Option3": "The",
+      "Option4": "None"
+    },
+    "Reponse": "An",
+    "Indice": "On l'utilise devant une voyelle."
+  },
+  {
+    "Id": 26,
+    "Intitule": "Traduisez la phrase : 'J'ai 20 ans'. (Attention au piège !)",
+    "Theme": 2,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "I am 20 years old",
+    "Indice": "En anglais, on 'est' un âge, on ne l'a pas."
+  },
+  {
+    "Id": 27,
+    "Intitule": "Quelle préposition suit le verbe 'Listen' ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "at",
+      "Option2": "in",
+      "Option3": "to",
+      "Option4": "for"
+    },
+    "Reponse": "to",
+    "Indice": "Listen ___ the music."
+  },
+  {
+    "Id": 28,
+    "Intitule": "Quel est le pluriel irrégulier du mot 'Mouse' (Souris) ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Mouses",
+      "Option2": "Mice",
+      "Option3": "Mousses",
+      "Option4": "Mise"
+    },
+    "Reponse": "Mice",
+    "Indice": "Ça rime avec 'Ice'."
+  },
+  {
+    "Id": 29,
+    "Intitule": "Que signifie le faux-ami 'Actually' en français ?",
+    "Theme": 2,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "En fait",
+    "Indice": "Cela ne veut pas dire 'Actuellement'."
+  },
+  {
+    "Id": 30,
+    "Intitule": "Choisissez la bonne forme : 'I look forward to ___ you.'",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "see",
+      "Option2": "seeing",
+      "Option3": "seen",
+      "Option4": "saw"
+    },
+    "Reponse": "seeing",
+    "Indice": "Après 'look forward to', le verbe prend -ing."
+  },
+  {
+    "Id": 31,
+    "Intitule": "Complétez avec le conditionnel : 'If I ___ rich, I would buy a boat.'",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "was",
+      "Option2": "were",
+      "Option3": "am",
+      "Option4": "would be"
+    },
+    "Reponse": "were",
+    "Indice": "C'est le subjonctif passé utilisé pour l'irréel."
+  },
+  {
+    "Id": 32,
+    "Intitule": "Complétez l'expression idiomatique : 'It's raining cats and ___.'",
+    "Theme": 2,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "dogs",
+    "Indice": "Il pleut des cordes (chats et ...)."
+  },
+  {
+    "Id": 33,
+    "Intitule": "Quelle est la différence entre 'Since' et 'For' ? Complétez : 'I have lived here ___ 10 years.'",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Since",
+      "Option2": "For",
+      "Option3": "During",
+      "Option4": "While"
+    },
+    "Reponse": "For",
+    "Indice": "On parle d'une durée, pas d'une date précise."
+  },
+  {
+    "Id": 34,
+    "Intitule": "Mettez cette phrase au passif : 'My mum made the cake.' -> 'The cake ___ by my mum.'",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "is made",
+      "Option2": "has been made",
+      "Option3": "was made",
+      "Option4": "had made"
+    },
+    "Reponse": "was made",
+    "Indice": "L'action est passée et terminée."
+  },
+  {
+    "Id": 35,
+    "Intitule": "Que signifie le phrasal verb 'To run out of' ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Courir dehors",
+      "Option2": "Manquer de",
+      "Option3": "S'enfuir",
+      "Option4": "Rencontrer quelqu'un"
+    },
+    "Reponse": "Manquer de",
+    "Indice": "Exemple: We ran out of milk."
+  },
+  {
+    "Id": 36,
+    "Intitule": "Quel est le participe passé (3ème colonne) du verbe 'To Fly' ?",
+    "Theme": 2,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Flown",
+    "Indice": "Fly - Flew - ..."
+  },
+  {
+    "Id": 37,
+    "Intitule": "Complétez cette structure inversée : 'Hardly ___ I arrived when the phone rang.'",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "have",
+      "Option2": "did",
+      "Option3": "had",
+      "Option4": "was"
+    },
+    "Reponse": "had",
+    "Indice": "C'est du Past Perfect inversé."
+  },
+  {
+    "Id": 38,
+    "Intitule": "Que signifie l'idiome 'To beat around the bush' ?",
+    "Theme": 2,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Battre les buissons",
+      "Option2": "Tourner autour du pot",
+      "Option3": "Se perdre en forêt",
+      "Option4": "Chercher des ennuis"
+    },
+    "Reponse": "Tourner autour du pot",
+    "Indice": "Ne pas aller droit au but."
+  },
+  {
+    "Id": 39,
+    "Intitule": "Traduisez le mot 'Hélas' en anglais formel.",
+    "Theme": 2,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Alas",
+    "Indice": "Un mot littéraire souvent utilisé par Shakespeare."
+  },
+  {
+    "Id": 40,
+    "Intitule": "Question Boss : Quelle est la forme correcte ? 'It's high time he ___ to bed.'",
+    "Theme": 2,
+    "TypeDeQuestion": 3,
+    "Options": {
+      "Option1": "go",
+      "Option2": "goes",
+      "Option3": "went",
+      "Option4": "has gone"
+    },
+    "Reponse": "went",
+    "Indice": "Après 'It's high time', on utilise le prétérit modal pour exprimer l'urgence."
+  },
+  {
+    "Id": 41,
+    "Intitule": "Suite logique : 2, 4, 8, 16, ... Quel est le prochain nombre ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "20",
+      "Option2": "24",
+      "Option3": "32",
+      "Option4": "18"
+    },
+    "Reponse": "32",
+    "Indice": "Chaque nombre est le double du précédent."
+  },
+  {
+    "Id": 42,
+    "Intitule": "Je suis le fils unique de ton père, mais je ne suis pas ton frère. Qui suis-je ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Ton oncle",
+      "Option2": "Toi-même",
+      "Option3": "Ton cousin",
+      "Option4": "Ton père"
+    },
+    "Reponse": "Toi-même",
+    "Indice": "Regarde dans un miroir."
+  },
+  {
+    "Id": 43,
+    "Intitule": "Qu'est-ce qui a des dents mais ne peut pas manger ?",
+    "Theme": 3,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Un peigne",
+    "Indice": "On l'utilise pour les cheveux."
+  },
+  {
+    "Id": 44,
+    "Intitule": "S'il y a 3 pommes et que tu en prends 2, combien de pommes as-tu ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "1",
+      "Option2": "2",
+      "Option3": "3",
+      "Option4": "0"
+    },
+    "Reponse": "2",
+    "Indice": "La question n'est pas combien il en reste, mais combien tu en *as*."
+  },
+  {
+    "Id": 45,
+    "Intitule": "Suite logique : 1, 1, 2, 3, 5, 8, ... Quel est le prochain nombre ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "11",
+      "Option2": "12",
+      "Option3": "13",
+      "Option4": "15"
+    },
+    "Reponse": "13",
+    "Indice": "C'est la suite de Fibonacci : additionne les deux précédents."
+  },
+  {
+    "Id": 46,
+    "Intitule": "Un nénuphar double de taille chaque jour. Au bout de 30 jours, il recouvre tout l'étang. Quel jour recouvrait-il la moitié de l'étang ?",
+    "Theme": 3,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "29",
+    "Indice": "Si il double chaque jour, la veille il faisait la moitié."
+  },
+  {
+    "Id": 47,
+    "Intitule": "Quel mois de l'année a 28 jours ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Février uniquement",
+      "Option2": "Février les années non bissextiles",
+      "Option3": "Tous les mois",
+      "Option4": "Aucun"
+    },
+    "Reponse": "Tous les mois",
+    "Indice": "S'ils ont 30 ou 31 jours, ils en ont forcément aussi 28."
+  },
+  {
+    "Id": 48,
+    "Intitule": "Suite alphabétique : A, C, E, G, ... Quelle est la prochaine lettre ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "H",
+      "Option2": "I",
+      "Option3": "J",
+      "Option4": "K"
+    },
+    "Reponse": "I",
+    "Indice": "On saute une lettre à chaque fois."
+  },
+  {
+    "Id": 49,
+    "Intitule": "Le père de Marie a 5 filles : Nana, Néné, Nini, Nono. Quel est le nom de la 5ème ?",
+    "Theme": 3,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Marie",
+    "Indice": "Relis le début de la phrase."
+  },
+  {
+    "Id": 50,
+    "Intitule": "Combien de gouttes d'eau peut-on mettre dans un verre vide ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "1",
+      "Option2": "100",
+      "Option3": "Autant que sa contenance",
+      "Option4": "Aucune"
+    },
+    "Reponse": "1",
+    "Indice": "Après la première goutte, le verre n'est plus vide."
+  },
+  {
+    "Id": 51,
+    "Intitule": "Tu participes à une course. Tu doubles le deuxième. Quelle est ta position ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Premier",
+      "Option2": "Deuxième",
+      "Option3": "Troisième",
+      "Option4": "Dernier"
+    },
+    "Reponse": "Deuxième",
+    "Indice": "Tu prends la place de celui que tu as doublé."
+  },
+  {
+    "Id": 52,
+    "Intitule": "Qu'est-ce qui t'appartient mais que les autres utilisent plus que toi ?",
+    "Theme": 3,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Ton prénom",
+    "Indice": "Les gens t'appellent par ce mot."
+  },
+  {
+    "Id": 53,
+    "Intitule": "Un fermier a 17 brebis. Elles meurent toutes sauf 9. Combien en reste-t-il ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "8",
+      "Option2": "9",
+      "Option3": "17",
+      "Option4": "0"
+    },
+    "Reponse": "9",
+    "Indice": "Attention à la formulation 'sauf 9'."
+  },
+  {
+    "Id": 54,
+    "Intitule": "Suite : U, D, T, Q, C, S, ... Quelle lettre suit ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "H",
+      "Option2": "S",
+      "Option3": "O",
+      "Option4": "N"
+    },
+    "Reponse": "S",
+    "Indice": "Un, Deux, Trois, Quatre, Cinq, Six, ..."
+  },
+  {
+    "Id": 55,
+    "Intitule": "Complétez la suite : 1 = 5, 2 = 10, 3 = 15, 4 = 20, 5 = ?",
+    "Theme": 3,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "1",
+    "Indice": "Regarde la toute première égalité de l'énoncé."
+  },
+  {
+    "Id": 56,
+    "Intitule": "Je parle sans bouche et j'entends sans oreilles. Je n'ai pas de corps, mais le vent me fait vivre. Qui suis-je ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Le silence",
+      "Option2": "L'écho",
+      "Option3": "L'air",
+      "Option4": "La pensée"
+    },
+    "Reponse": "L'écho",
+    "Indice": "Je répète ce que tu dis."
+  },
+  {
+    "Id": 57,
+    "Intitule": "Un homme regarde un portrait. Il dit : 'Je n'ai ni frère ni sœur, mais le père de cet homme est le fils de mon père'. Qui est sur le portrait ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Son fils",
+      "Option2": "Lui-même",
+      "Option3": "Son père",
+      "Option4": "Son oncle"
+    },
+    "Reponse": "Son fils",
+    "Indice": "'Le fils de mon père' c'est moi (puisque je n'ai ni frère ni sœur). Donc : 'Le père de cet homme est... MOI'."
+  },
+  {
+    "Id": 58,
+    "Intitule": "Il y a deux canards devant un canard, deux canards derrière un canard et un canard au milieu. Combien y a-t-il de canards au minimum ?",
+    "Theme": 3,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "5",
+      "Option2": "4",
+      "Option3": "3",
+      "Option4": "2"
+    },
+    "Reponse": "3",
+    "Indice": "Ils sont en file indienne."
+  },
+  {
+    "Id": 59,
+    "Intitule": "Question Difficile : Combien de fois peut-on soustraire 10 de 100 ?",
+    "Theme": 3,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "1",
+    "Indice": "Une fois que tu as soustrait 10, tu n'as plus 100, tu as 90."
+  },
+  {
+    "Id": 60,
+    "Intitule": "Question Boss : Vous avez 3 boîtes. Une contient deux lingots d'or, une contient deux lingots d'argent, et la troisième contient un or et un argent. Les étiquettes sont toutes fausses. Vous tirez un lingot d'une boîte : c'est de l'or. Quelle est la probabilité que le second lingot de cette même boîte soit aussi de l'or ?",
+    "Theme": 3,
+    "TypeDeQuestion": 3,
+    "Options": {
+      "Option1": "50% (1/2)",
+      "Option2": "33% (1/3)",
+      "Option3": "66% (2/3)",
+      "Option4": "100%"
+    },
+    "Reponse": "66% (2/3)",
+    "Indice": "Ce n'est pas 1/2. Vous avez tiré un lingot d'Or. Ce lingot peut être soit le premier de la boîte Or/Or, soit le deuxième de la boîte Or/Or, soit l'unique or de la boîte Or/Argent. Il y a 3 'cas' possibles de lingot d'or. Dans 2 de ces cas, l'autre est en or."
+  },
+  {
+    "Id": 61,
+    "Intitule": "De quelle couleur est le cheval blanc d'Henri IV ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Blanc",
+    "Indice": "La réponse est dans la question."
+  },
+  {
+    "Id": 62,
+    "Intitule": "Quelle est la capitale de la France ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Lyon",
+      "Option2": "Marseille",
+      "Option3": "Paris",
+      "Option4": "Bordeaux"
+    },
+    "Reponse": "Paris",
+    "Indice": "La ville lumière."
+  },
+  {
+    "Id": 63,
+    "Intitule": "Combien de pattes a une araignée ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "8",
+    "Indice": "Ce n'est pas un insecte (qui en a 6)."
+  },
+  {
+    "Id": 64,
+    "Intitule": "Qui a peint La Joconde (Mona Lisa) ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Michel-Ange",
+      "Option2": "Léonard de Vinci",
+      "Option3": "Raphaël",
+      "Option4": "Donatello"
+    },
+    "Reponse": "Léonard de Vinci",
+    "Indice": "Un génie italien de la Renaissance."
+  },
+  {
+    "Id": 65,
+    "Intitule": "Quelle est la formule chimique de l'eau ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "H2O",
+    "Indice": "Deux atomes d'hydrogène, un d'oxygène."
+  },
+  {
+    "Id": 66,
+    "Intitule": "Quel est l'océan le plus vaste du monde ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "L'Atlantique",
+      "Option2": "L'Indien",
+      "Option3": "L'Arctique",
+      "Option4": "Le Pacifique"
+    },
+    "Reponse": "Le Pacifique",
+    "Indice": "Son nom signifie 'calme', mais il est immense."
+  },
+  {
+    "Id": 67,
+    "Intitule": "Quel personnage célèbre a marché le premier sur la Lune en 1969 ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Buzz Aldrin",
+      "Option2": "Yuri Gagarine",
+      "Option3": "Neil Armstrong",
+      "Option4": "Michael Collins"
+    },
+    "Reponse": "Neil Armstrong",
+    "Indice": "Un petit pas pour l'homme..."
+  },
+  {
+    "Id": 68,
+    "Intitule": "Dans quelle ville se trouve le Colisée ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Rome",
+    "Indice": "En Italie."
+  },
+  {
+    "Id": 69,
+    "Intitule": "Qui a écrit la série de livres 'Harry Potter' ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "J.R.R. Tolkien",
+      "Option2": "Stephen King",
+      "Option3": "J.K. Rowling",
+      "Option4": "George R.R. Martin"
+    },
+    "Reponse": "J.K. Rowling",
+    "Indice": "Une auteure britannique."
+  },
+  {
+    "Id": 70,
+    "Intitule": "Quelle est la monnaie utilisée au Royaume-Uni ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "La Livre Sterling",
+    "Indice": "Ce n'est pas l'Euro."
+  },
+  {
+    "Id": 71,
+    "Intitule": "En quelle année a eu lieu la prise de la Bastille ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "1789",
+      "Option2": "1799",
+      "Option3": "1815",
+      "Option4": "1515"
+    },
+    "Reponse": "1789",
+    "Indice": "Le 14 juillet."
+  },
+  {
+    "Id": 72,
+    "Intitule": "Quel est le symbole chimique de l'Or ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Au",
+    "Indice": "Vient du latin 'Aurum'."
+  },
+  {
+    "Id": 73,
+    "Intitule": "Quelle planète est la plus proche du Soleil ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Vénus",
+      "Option2": "Terre",
+      "Option3": "Mars",
+      "Option4": "Mercure"
+    },
+    "Reponse": "Mercure",
+    "Indice": "C'est la plus petite du système solaire."
+  },
+  {
+    "Id": 74,
+    "Intitule": "Qui fut le premier président des États-Unis ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "George Washington",
+    "Indice": "Son visage est sur le billet de 1 dollar."
+  },
+  {
+    "Id": 75,
+    "Intitule": "Quelle est la capitale de l'Australie ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Sydney",
+      "Option2": "Melbourne",
+      "Option3": "Canberra",
+      "Option4": "Perth"
+    },
+    "Reponse": "Canberra",
+    "Indice": "Ce n'est ni la plus grande, ni la plus connue."
+  },
+  {
+    "Id": 76,
+    "Intitule": "Quel peintre espagnol est l'auteur de la toile 'Guernica' ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Pablo Picasso",
+    "Indice": "Père du cubisme."
+  },
+  {
+    "Id": 77,
+    "Intitule": "Combien d'os contient le squelette d'un humain adulte ?",
+    "Theme": 4,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "106",
+      "Option2": "206",
+      "Option3": "306",
+      "Option4": "406"
+    },
+    "Reponse": "206",
+    "Indice": "Les bébés en ont plus, mais ils fusionnent."
+  },
+  {
+    "Id": 78,
+    "Intitule": "En quelle année le Mur de Berlin est-il tombé ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "1989",
+    "Indice": "C'était en novembre, marquant la fin de la guerre froide."
+  },
+  {
+    "Id": 79,
+    "Intitule": "Combien de temps a duré la Guerre de Cent Ans ?",
+    "Theme": 4,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "116 ans",
+    "Indice": "C'est un piège, elle a duré plus de 100 ans."
+  },
+  {
+    "Id": 80,
+    "Intitule": "Question Boss : Qui a refusé le prix Nobel de littérature en 1964 ?",
+    "Theme": 4,
+    "TypeDeQuestion": 3,
+    "Options": {
+      "Option1": "Albert Camus",
+      "Option2": "Jean-Paul Sartre",
+      "Option3": "Boris Pasternak",
+      "Option4": "Ernest Hemingway"
+    },
+    "Reponse": "Jean-Paul Sartre",
+    "Indice": "Philosophe existentialiste français, il a refusé tous les prix officiels."
+  },
+  {
+    "Id": 81,
+    "Intitule": "Quel métier consiste à créer la partie visible d'un site web (ce que l'utilisateur voit) ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Développeur Frontend",
+    "Indice": "Le contraire du Backend."
+  },
+  {
+    "Id": 82,
+    "Intitule": "Quel professionnel est chargé de réparer les ordinateurs et d'installer les logiciels dans une entreprise ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Le Data Scientist",
+      "Option2": "Le Technicien Support / Helpdesk",
+      "Option3": "Le Webdesigner",
+      "Option4": "Le Scrum Master"
+    },
+    "Reponse": "Le Technicien Support / Helpdesk",
+    "Indice": "C'est la personne qu'on appelle quand l'imprimante ne marche plus."
+  },
+  {
+    "Id": 83,
+    "Intitule": "Comment appelle-t-on un développeur qui maîtrise à la fois le Frontend et le Backend ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Développeur Fullstack",
+    "Indice": "Il gère toute la 'pile' technique."
+  },
+  {
+    "Id": 84,
+    "Intitule": "Quel est le rôle principal d'un UI Designer ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Gérer la base de données",
+      "Option2": "Concevoir l'interface graphique",
+      "Option3": "Sécuriser le réseau",
+      "Option4": "Réparer les serveurs"
+    },
+    "Reponse": "Concevoir l'interface graphique",
+    "Indice": "UI signifie User Interface."
+  },
+  {
+    "Id": 85,
+    "Intitule": "Quel métier est responsable de la gestion et de la maintenance des serveurs ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Administrateur Système",
+    "Indice": "Souvent appelé 'SysAdmin'."
+  },
+  {
+    "Id": 86,
+    "Intitule": "Dans une équipe Agile, qui est responsable de définir les priorités du produit (le 'Quoi') ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Le Scrum Master",
+      "Option2": "Le Product Owner",
+      "Option3": "Le Lead Dev",
+      "Option4": "Le CEO"
+    },
+    "Reponse": "Le Product Owner",
+    "Indice": "Il est la voix du client dans l'équipe."
+  },
+  {
+    "Id": 87,
+    "Intitule": "Quel est l'objectif principal d'un UX Designer ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Améliorer l'expérience utilisateur",
+    "Indice": "Rendre le parcours fluide et intuitif, pas juste joli."
+  },
+  {
+    "Id": 88,
+    "Intitule": "Quel métier consiste à analyser des grandes quantités de données pour en extraire de la valeur ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Data Scientist",
+      "Option2": "Network Administrator",
+      "Option3": "Web Integrator",
+      "Option4": "Community Manager"
+    },
+    "Reponse": "Data Scientist",
+    "Indice": "C'est un mélange de mathématiques, de statistiques et d'informatique."
+  },
+  {
+    "Id": 89,
+    "Intitule": "Que signifie l'acronyme QA dans le métier 'Ingénieur QA' ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Quality Assurance",
+    "Indice": "C'est celui qui teste le logiciel pour trouver les bugs."
+  },
+  {
+    "Id": 90,
+    "Intitule": "Quel est le rôle d'un Pentester ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Réparer les stylos",
+      "Option2": "Tester la sécurité en simulant des attaques",
+      "Option3": "Tester les performances des disques durs",
+      "Option4": "Gérer les câbles réseau"
+    },
+    "Reponse": "Tester la sécurité en simulant des attaques",
+    "Indice": "On l'appelle aussi hacker éthique."
+  },
+  {
+    "Id": 91,
+    "Intitule": "Quel métier fait le pont entre le développement (Dev) et les opérations (Ops) pour automatiser les déploiements ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Ingénieur DevOps",
+    "Indice": "Il utilise des outils comme Docker ou Jenkins."
+  },
+  {
+    "Id": 92,
+    "Intitule": "Quel spécialiste est expert dans le référencement naturel des sites web ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Expert SEO",
+      "Option2": "Expert SEA",
+      "Option3": "Expert CTO",
+      "Option4": "Expert IDE"
+    },
+    "Reponse": "Expert SEO",
+    "Indice": "Search Engine Optimization."
+  },
+  {
+    "Id": 93,
+    "Intitule": "Quel est le titre du directeur technique d'une entreprise ou d'une start-up ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "CTO",
+    "Indice": "Chief Technical Officer."
+  },
+  {
+    "Id": 94,
+    "Intitule": "Quel métier se concentre spécifiquement sur la création d'applications pour Android ou iOS ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Développeur Embarqué",
+      "Option2": "Développeur Mobile",
+      "Option3": "Développeur Desktop",
+      "Option4": "Développeur Cloud"
+    },
+    "Reponse": "Développeur Mobile",
+    "Indice": "Il utilise souvent Swift, Kotlin ou Flutter."
+  },
+  {
+    "Id": 95,
+    "Intitule": "Qui est responsable de la conformité des données personnelles (RGPD) dans une entreprise ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "DPO",
+    "Indice": "Data Protection Officer."
+  },
+  {
+    "Id": 96,
+    "Intitule": "Quel est le rôle d'un Lead Developer ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Recruter les stagiaires",
+      "Option2": "Guider techniquement l'équipe et coder",
+      "Option3": "Vendre le logiciel aux clients",
+      "Option4": "Réparer la machine à café"
+    },
+    "Reponse": "Guider techniquement l'équipe et coder",
+    "Indice": "C'est un développeur expérimenté qui encadre les juniors."
+  },
+  {
+    "Id": 97,
+    "Intitule": "Que signifie SRE, ce métier popularisé par Google pour la fiabilité des sites ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Site Reliability Engineering",
+    "Indice": "Ingénierie de la fiabilité du site."
+  },
+  {
+    "Id": 98,
+    "Intitule": "Quel métier conçoit la structure globale et les choix techniques d'un projet complexe ?",
+    "Theme": 5,
+    "TypeDeQuestion": 2,
+    "Options": {
+      "Option1": "Architecte Logiciel",
+      "Option2": "Maçon Numérique",
+      "Option3": "Développeur Junior",
+      "Option4": "Designer"
+    },
+    "Reponse": "Architecte Logiciel",
+    "Indice": "Il décide quels frameworks et patterns utiliser."
+  },
+  {
+    "Id": 99,
+    "Intitule": "Quel développeur travaille sur des systèmes aux ressources limitées (objets connectés, voitures, robots) ?",
+    "Theme": 5,
+    "TypeDeQuestion": 1,
+    "Options": null,
+    "Reponse": "Développeur Embarqué",
+    "Indice": "Il code souvent en C ou C++ très bas niveau."
+  },
+  {
+    "Id": 100,
+    "Intitule": "Question Boss : Quel rôle dans la cybersécurité supervise le centre des opérations de sécurité (SOC) ?",
+    "Theme": 5,
+    "TypeDeQuestion": 3,
+    "Options": {
+      "Option1": "SOC Analyst",
+      "Option2": "CISO / RSSI",
+      "Option3": "Scrum Master",
+      "Option4": "Helpdesk Manager"
+    },
+    "Reponse": "CISO / RSSI",
+    "Indice": "Chief Information Security Officer (Responsable de la Sécurité des Systèmes d'Information)."
+  }
+]
