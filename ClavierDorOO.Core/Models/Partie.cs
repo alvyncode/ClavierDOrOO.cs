@@ -1,4 +1,3 @@
-using System;
 using Models.Factories;
 
 namespace Models;
@@ -17,6 +16,6 @@ public class Partie
     
     public Partie ()
     {
-        Scores = ScoresFactory.CreateScores();
+        // Scores = ScoresFactory.CreateScores();
     }
 }

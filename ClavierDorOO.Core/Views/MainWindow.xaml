@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Views"
         mc:Ignorable="d"
-        Title="MainWindow"
+        Title="ClavierDorOO"
         Height="auto"
         Width="auto"
         Background = "Gold">
@@ -19,7 +19,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Clavier D'or"
+        <TextBlock Text="CLAVIER D'OR"
                    FontSize="100"
                    Margin="0,20,0,90"
                    FontFamily="LCD"
@@ -33,32 +33,36 @@
         <StackPanel Grid.Row="1"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Center"
-                    Width="320">
+                    >
             <Button Content="New Game"
                     FontFamily="Segoe UI"
                     Margin="0,0,0,16"
-                    Height="68"
-                    FontSize="40"
+                    Height="75"
+                    Width="632"
+                    FontSize="34"
                     Background="#8F0F61FA"
                     FontWeight="Bold"/>
             <Button Content="Reload Game"
                     FontFamily="Segoe UI"
                     Margin="0,0,0,16"
-                    Height="68"
-                    FontSize="40"
+                    Height="75"
+                    Width="632"
+                    FontSize="34"
                     Background="#8F0F61FA"
                     FontWeight="Bold"/>
             <Button Content="View History"
                     FontFamily="Segoe UI"
                     Margin="0,0,0,16"
-                    Height="68"
-                    FontSize="40"
+                    Height="75"
+                    Width="632"
+                    FontSize="34"
                     Background="#8F0F61FA"
                     FontWeight="Bold"/>
             <Button Content="Rules"
                     FontFamily="Segoe UI"
-                    Height="68"
-                    FontSize="40"
+                    Height="75"
+                    Width="632"
+                    FontSize="34"
                     Background="#8F0F61FA"
                     FontWeight="Bold"/>
         </StackPanel>
