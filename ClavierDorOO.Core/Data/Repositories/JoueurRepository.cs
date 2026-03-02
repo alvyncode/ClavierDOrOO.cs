@@ -14,22 +14,22 @@ public class JoueurRepository
         _context = new ClavierDorDbContext(optionsBuilder.Options);
     }
     public void AjouterJoueur(Joueur joueur)
-{
-    if (joueur.Id == 0)
     {
-        bool joueurExisteDeja = _context.Joueurs.Any(j => j.Pseudo.ToLower() == joueur.Pseudo.ToLower());
-        if (joueurExisteDeja)
+        if (joueur.Id == 0)
         {
-            throw new InvalidOperationException("Un joueur avec ce pseudo existe déjà !");
-        }
+            bool joueurExisteDeja = _context.Joueurs.Any(j => j.Pseudo.ToLower() == joueur.Pseudo.ToLower());
+            if (joueurExisteDeja)
+            {
+                throw new InvalidOperationException("Un joueur avec ce pseudo existe déjà !");
+            }
 
-        _context.Joueurs.Add(joueur);
+            _context.Joueurs.Add(joueur);
+        }
+        else
+        {
+            _context.Joueurs.Update(joueur);
+        }
+        
+        _context.SaveChanges();
     }
-    else
-    {
-        _context.Joueurs.Update(joueur);
-    }
-    
-    _context.SaveChanges();
-}
 }

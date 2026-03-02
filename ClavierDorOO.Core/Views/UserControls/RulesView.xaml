@@ -1,0 +1,48 @@
+<UserControl x:Class="Views.UserControls.RulesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Views.UserControls"
+             mc:Ignorable="d"
+             Height="auto" Width="auto">
+    <Grid>       
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Height="auto" Width="620">
+            <StackPanel Margin="2,0,2,-32" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" Height="auto" Orientation="Vertical" >
+                <TextBlock TextWrapping="Wrap" FontSize="30" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" Height="auto" TextAlignment="Center">
+                    📖 RÈGLES DU CLAVIER D&apos;OR 📖
+                    <LineBreak/>
+                    <LineBreak/>
+                </TextBlock>
+                <TextBlock Text="Comptabilisation du score" TextDecorations="underline" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" Height="auto" TextAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" FontSize="15" VerticalAlignment="Center" FontFamily="Segoe UI"  FontWeight="Bold" Height="auto" TextAlignment="Left">
+                    <LineBreak/>
+                    ▸ Chaque QCM te rapporte :                +1 point
+                    <LineBreak/>
+                    ▸ Chaque question ouverte :                 +3 points
+                    <LineBreak/>
+                    ▸ Chaque question finale (⚔️ Boss) :         +5 points
+                    <LineBreak/>
+                    <LineBreak/> 
+                </TextBlock>
+                <TextBlock Text="Objectif" TextDecorations="underline" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" Height="auto" TextAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" FontSize="15" VerticalAlignment="Center" FontFamily="Segoe UI"  FontWeight="Bold" Height="auto" TextAlignment="Center">
+                <LineBreak/>
+                Cumule un total de 170 points à l'issue de tes 5 épreuves pour mériter le <LineBreak/>🏆 CLAVIER D'OR 🏆  
+                <LineBreak/>
+                <LineBreak/>
+                </TextBlock>
+                <TextBlock Text="Rôles" TextDecorations="underline" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold" Height="auto" TextAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" FontSize="15" VerticalAlignment="Center" FontFamily="Segoe UI" Height="auto" TextAlignment="Left">
+                    Chaque joueur à la possibilité d'obtenir un rôle lui accordasnt diverts avantages
+                    <LineBreak /><LineBreak />
+                    <Run FontWeight="Bold" TextDecorations="Underline" >Développeur Front</Run> : Changer de question. Utilisable 5 fois en cours de partie
+                    <LineBreak /><LineBreak />
+                    <Run FontWeight="Bold" TextDecorations="Underline">Développeur Back</Run> : Rattrapage automatiques qui s'active en cas de mauvaise réponse. Utilisable 5 fois en cours de partie
+                    <LineBreak /><LineBreak />
+                    <Run FontWeight="Bold" TextDecorations="Underline">Développeur Mobile</Run> : Donne accès à 3 indices par thème au cours d'une partie
+            </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -3,69 +3,45 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:VMU="clr-namespace:ViewModels.UserControls;assembly=ViewModels"
+        xmlns:VM="clr-namespace:ViewModels"
+        xmlns:Views="clr-namespace:Views.UserControls"
         xmlns:local="clr-namespace:Views"
         mc:Ignorable="d"
         Title="ClavierDorOO"
         Height="auto"
         Width="auto"
         Background = "Gold">
-    <Grid Background="Gold"
-          VerticalAlignment="Center"
-          HorizontalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Text="CLAVIER D'OR"
-                   FontSize="100"
-                   Margin="0,20,0,90"
-                   FontFamily="LCD"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
-                   Height="auto"
-                   Width="auto"
-                   Grid.Row="0"
-                   TextAlignment="Center"
-                   FontWeight="Bold"/>
-        <StackPanel Grid.Row="1"
-                    VerticalAlignment="Top"
-                    HorizontalAlignment="Center"
-                    >
-            <Button Content="New Game"
-                    FontFamily="Segoe UI"
-                    Margin="0,0,0,16"
-                    Height="75"
-                    Width="632"
-                    FontSize="34"
-                    Background="#8F0F61FA"
-                    FontWeight="Bold"/>
-            <Button Content="Reload Game"
-                    FontFamily="Segoe UI"
-                    Margin="0,0,0,16"
-                    Height="75"
-                    Width="632"
-                    FontSize="34"
-                    Background="#8F0F61FA"
-                    FontWeight="Bold"/>
-            <Button Content="View History"
-                    FontFamily="Segoe UI"
-                    Margin="0,0,0,16"
-                    Height="75"
-                    Width="632"
-                    FontSize="34"
-                    Background="#8F0F61FA"
-                    FontWeight="Bold"/>
-            <Button Content="Rules"
-                    FontFamily="Segoe UI"
-                    Height="75"
-                    Width="632"
-                    FontSize="34"
-                    Background="#8F0F61FA"
-                    FontWeight="Bold"/>
-        </StackPanel>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type VMU:RegisterViewModel}">
+            <Views:RegisterUserControl/>
+        </DataTemplate>
 
+        <DataTemplate DataType="{x:Type VMU:ThemeMenuViewModel}">
+            <Views:ThemeMenu/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VMU:MainMenuViewModel}">
+            <Views:MainMenu />
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type VMU:RulesViewModel}">
+            <Views:RulesView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VMU:NewGameViewModel}">
+            <Views:ThemeMenu />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VMU:ConnexionRegisterViewModel}">
+            <Views:ConnexionRegisterUserControl />
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ContentControl Content="{Binding VueCourante}" />
+        <Button Content="🏠" Command = "{Binding AllerHomeCommand}" Style="{StaticResource BoutonArrondi}" Margin="10,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="auto" Height="auto" Background="#000F56FA" FontSize="32" Foreground="Black" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment ="Left" VerticalAlignment = "Bottom" Margin="0,0,20,20" Background="Transparent">
+          <Button Content="R u l e s 📋📏" Command="{Binding AllerReglesCommand}" Height="41" FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" Background="Transparent" BorderThickness="0" Foreground="Black" />
+        </StackPanel>
     </Grid>
 </Window>
