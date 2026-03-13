@@ -12,16 +12,15 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>  <ColumnDefinition Width="*"/>  <ColumnDefinition Width="*"/>  </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#5CD4D4D4" Margin="0,20,0,20">
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,20">
             <TextBlock Text="MENU DES THEMES" FontSize="110" Margin="30,10,30,-15" FontFamily="Segoe UI" FontWeight="Bold" HorizontalAlignment="Center" />
             <TextBlock Text="Choisissez un thème" FontWeight="Bold" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,10" />
         </StackPanel>
 
-        <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#000F56FA" BorderThickness="0" 
+        <Button Grid.Row="1" Grid.Column="0" Command ="{Binding BoutonAlgorithmie}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#000F56FA" BorderThickness="0" 
         BorderBrush="Transparent" >
             <StackPanel Orientation="Horizontal">
-                <Image Source="https://userware-xaml-designer-backend-api.azurewebsites.net/images/logo.png" Width="31" Height="32" />
-                <TextBlock Text="Programmation" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" >
+                <TextBlock Text="⚙️Algorithmie" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" >
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="Black" />
                     </TextBlock.Foreground>
@@ -29,41 +28,37 @@
             </StackPanel>
         </Button>
 
-        <Button Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#000F56FA" BorderThickness="0" 
+        <Button Grid.Row="1" Grid.Column="2" Command ="{Binding BoutonAnglais}"  HorizontalAlignment="Left" VerticalAlignment="Center" Background="#000F56FA" BorderThickness="0" 
         BorderBrush="Transparent" >
             <StackPanel Orientation="Horizontal">
-                <Image Source="https://userware-xaml-designer-backend-api.azurewebsites.net/images/logo.png" Width="31" Height="32" />
-                <TextBlock Text="Philosophie" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" Foreground="black"/>
+                <TextBlock Text="🗣️Anglais" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" Foreground="black"/>
             </StackPanel>
         </Button>
 
-        <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="232" Background="#00FF5724" Margin="0,0,-48,0" BorderThickness="0" 
+        <Button Grid.Row="2" Grid.Column="1" Command ="{Binding BoutonLogique}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="232" Background="#00FF5724" Margin="0,0,-48,0" BorderThickness="0" 
         BorderBrush="Transparent">
             <StackPanel Orientation="Horizontal" Width="209">
-                <Image Source="https://userware-xaml-designer-backend-api.azurewebsites.net/images/logo.png" Width="31" Height="32" />
-                <TextBlock Text="Jeux Vidéo" FontSize="32" FontWeight="Bold" VerticalAlignment="Center" Foreground="black" Width="182"/>
+                <TextBlock Text="🧩Logique" FontSize="32" FontWeight="Bold" VerticalAlignment="Center" Foreground="black" Width="182"/>
             </StackPanel>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#000F56FA" BorderThickness="0" 
+        <Button Grid.Row="3" Grid.Column="0" Command ="{Binding BoutonMDI}" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#000F56FA" BorderThickness="0" 
         BorderBrush="Transparent" >
             <Button.Foreground>
                 <SolidColorBrush Color="{DynamicResource Theme_BackgroundColor}" />
             </Button.Foreground>
             <StackPanel Orientation="Horizontal">
-                <Image Source="https://userware-xaml-designer-backend-api.azurewebsites.net/images/logo.png" Width="31" Height="32" />
-                <TextBlock Text="Sport &amp; Fitness" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" Foreground="black"/>
+                <TextBlock Text="👨‍💻Métiers de l'Informatique" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" Foreground="black"/>
             </StackPanel>
         </Button>
 
-        <Button Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#000F56FA" BorderThickness="0" 
+        <Button Grid.Row="3" Grid.Column="2" Command ="{Binding BoutonCultureG}" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#000F56FA" BorderThickness="0" 
         BorderBrush="Transparent" >
             <Button.Foreground>
                 <SolidColorBrush Color="Transparent" />
             </Button.Foreground>
             <StackPanel Orientation="Horizontal">
-                <Image Source="https://userware-xaml-designer-backend-api.azurewebsites.net/images/logo.png" Width="31" Height="32" />
-                <TextBlock Text="Culture Générale" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" Foreground="black"/>
+                <TextBlock Text="🏛️Culture Générale" FontSize="32" VerticalAlignment="Center" FontWeight="Bold" Foreground="black"/>
             </StackPanel>
         </Button>
 

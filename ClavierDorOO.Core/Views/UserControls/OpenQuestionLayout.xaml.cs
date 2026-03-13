@@ -1,11 +1,11 @@
 using System.Windows.Controls;
 using ViewModels.UserControls;
 namespace Views.UserControls;
-public partial class ThemeMenu :UserControl
+public partial class OpenQuestionLayout : UserControl
 {
-    public ThemeMenu()
-    {    
+    public OpenQuestionLayout()
+    {
         InitializeComponent();
-        this.DataContext = new ThemeMenuViewModel();
     }
+        
 }

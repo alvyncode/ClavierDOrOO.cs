@@ -21,7 +21,7 @@
                     FontWeight="Bold"/>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Bienvenue" Margin ="18,0,18,0" VerticalAlignment="Top" FontFamily= "Segoe UI" FontSize ="32" />
-                <TextBlock Text="{Binding Pseudo}" VerticalAlignment="Top" FontFamily= "Segoe UI" FontSize ="32" FontWeight = "Bold" />
+                <TextBlock Text="{Binding Pseudo, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" FontFamily= "Segoe UI" FontSize ="32" FontWeight = "Bold" />
             </StackPanel>
         </StackPanel>
         <StackPanel Width="500" HorizontalAlignment="Center" VerticalAlignment="Center" Margin ="0,180,0,0">

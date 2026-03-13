@@ -26,6 +26,7 @@ namespace ViewModels.UserControls
             set
             {
                 _pseudo = value;
+                OnPropertyChanged();
             }
         }
         public string RoleSelectionne

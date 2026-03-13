@@ -9,6 +9,7 @@
         xmlns:local="clr-namespace:Views"
         mc:Ignorable="d"
         Title="ClavierDorOO"
+        Icon = "pack://application:,,,/Assets/Icon.png"
         Height="auto"
         Width="auto"
         Background = "Gold">
@@ -34,12 +35,15 @@
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type VMU:ConnexionRegisterViewModel}">
-            <Views:ConnexionRegisterUserControl />
+            <Views:ConnexionRegisterUserControl/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type VMU:QuestionLayoutViewModel}">
+            <Views:QuestionLayout/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
         <ContentControl Content="{Binding VueCourante}" />
-        <Button Content="🏠" Command = "{Binding AllerHomeCommand}" Style="{StaticResource BoutonArrondi}" Margin="10,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="auto" Height="auto" Background="#000F56FA" FontSize="32" Foreground="Black" />
+        <Button Content="🏠" Command = "{Binding AllerHomeCommand}" Style="{StaticResource BoutonArrondi}" Margin="10,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="auto" Height="auto" Background="#000F56FA" FontSize="28" Foreground="Black" />
         <StackPanel Orientation="Horizontal" HorizontalAlignment ="Left" VerticalAlignment = "Bottom" Margin="0,0,20,20" Background="Transparent">
           <Button Content="R u l e s 📋📏" Command="{Binding AllerReglesCommand}" Height="41" FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" Background="Transparent" BorderThickness="0" Foreground="Black" />
         </StackPanel>

@@ -2,6 +2,7 @@ namespace Models.Enums;
 
 public enum Theme
 {
+    Aucun = 0,
     Algorithmie = 1,
     Anglais = 2,
     Logique = 3,

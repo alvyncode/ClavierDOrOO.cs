@@ -1,0 +1,74 @@
+<UserControl x:Class="Views.UserControls.OptionQuestionLayout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Views.UserControls"
+             mc:Ignorable="d"
+             Height="auto"
+        Width="auto">
+    <Grid HorizontalAlignment="center"
+            Margin="0,15,0,15"
+            VerticalAlignment="bottom"
+            Width="1350"
+            Height="450">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="{Binding PreOption}"
+                Command ="{Binding ValidationDesReponses}"
+                CommandParameter ="{Binding PreOption}"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                VerticalAlignment="Center"
+                Width="600"
+                Height="120"
+                Grid.Column="0"
+                Grid.Row="0"
+                Style="{StaticResource BoutonArrondi}"/>
+        <Button Content="{Binding DeuOption }"
+                Command ="{Binding ValidationDesReponses}"
+                CommandParameter ="{Binding DeuOption}"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                VerticalAlignment="Center"
+                Width="600"
+                Height="120"
+                Grid.Column="1"
+                Grid.Row="0"
+                Style="{StaticResource BoutonArrondi}"/>
+        <Button Content="{Binding TroiOption}"
+                Command ="{Binding ValidationDesReponses}"
+                CommandParameter ="{Binding TroiOption}"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                VerticalAlignment="Center"
+                Width="600"
+                Height="120"
+                Grid.Column="0"
+                Grid.Row="1"
+                Style="{StaticResource BoutonArrondi}"
+                Visibility="{Binding VisibiliteBoutonTrois}"/>
+        <Button Content="{Binding QuaOption}"
+                Command ="{Binding ValidationDesReponses}"
+                CommandParameter ="{Binding QuaOption}"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                VerticalAlignment="Center"
+                Width="600"
+                Height="120"
+                Grid.Column="1"
+                Grid.Row="1"
+                Style="{StaticResource BoutonArrondi}"
+                Visibility="{Binding VisibiliteBoutonQuatre}"/>
+    </Grid>
+</UserControl>

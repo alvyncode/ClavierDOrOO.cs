@@ -1,11 +1,11 @@
+using System.Runtime.InteropServices.Marshalling;
 using System.Windows.Controls;
 using ViewModels.UserControls;
 namespace Views.UserControls;
-public partial class ThemeMenu :UserControl
+public partial class QuestionLayout :UserControl
 {
-    public ThemeMenu()
+    public QuestionLayout()
     {    
         InitializeComponent();
-        this.DataContext = new ThemeMenuViewModel();
     }
 }
