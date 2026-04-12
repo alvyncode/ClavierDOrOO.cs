@@ -5,18 +5,16 @@ namespace Data;
 
 public class ClavierDorDbContext : DbContext
 {
-    // Constructeur 1 : Pour ton App WPF (Runtime)
-    // C'est celui que tu utiliseras dans App.xaml.cs avec les vraies infos
+    // Constructeur 1 
+    
     public ClavierDorDbContext(DbContextOptions<ClavierDorDbContext> options) : base(options)
     {
     }
 
-    // Constructeur 2 : Vide (Pour que EF Core puisse l'instancier sans paramètres)
     public ClavierDorDbContext()
     {
     }
 
-    // LA MÉTHODE MAGIQUE
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Si aucune option n'a été passée (cas des migrations EF Core), on configure ici

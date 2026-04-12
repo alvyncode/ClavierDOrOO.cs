@@ -1,0 +1,57 @@
+<UserControl x:Class="Views.UserControls.NouvellePartieRoleUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Views.UserControls"
+             mc:Ignorable="d"
+             Height="auto" Width="auto">
+    <Grid>
+        <TextBlock Text="CLAVIER D'OR"
+        FontSize="130"
+        Margin = "18,15,60,3"
+        FontFamily="Segoe UI"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Height="152"
+        Width="910"
+        Grid.Row="0"
+        TextAlignment="Left"
+        FontWeight="Bold"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment ="Center" Margin="0,60" Width= "700">    
+                <Label Content="Nom de la Partie" FontSize="32"
+                FontWeight="Bold" 
+                Margin="0,0,0,10"/>
+                <Border CornerRadius="15" Background="White" Margin="0,0,0,40">
+                        <TextBox FontSize="32"
+                                Text="{Binding NomDeLaPartie }" 
+                                Background="Transparent" 
+                                BorderThickness="0" 
+                                Padding="15,10,15,10" 
+                                Foreground="Black" />
+                </Border>
+                <Label Content="Rôle" FontSize="32"
+                FontWeight="Bold" 
+                Margin="0,0,0,10"/>
+                <ComboBox FontSize="32"
+                        Foreground="Black"
+                        Background="#B8FFFFFF"
+                        Height ="60"
+                        ItemsSource="{Binding ListeDesRoles}" 
+                        SelectedItem="{Binding RoleSelectionne}"
+                        Margin="0,0,0,60">
+                </ComboBox>
+
+                <Border CornerRadius="15" Background="#E8E7D5" Margin="40,0,0,40" Width ="200" Height ="auto">
+                    <Button FontSize="32"
+                            Background="Transparent"
+                            Padding="15,10,15,10" 
+                            Width = "200"
+                            Content = "Confimer"
+                            Command = "{ Binding ConfirmerButton}"
+                            HorizontalAlignment = "Center" 
+                            Foreground="Black" />
+                </Border>
+        </StackPanel>    
+    </Grid>
+</UserControl>

@@ -15,7 +15,6 @@ public class Joueur
         set { _pseudo = value; }
     }
     public int MeilleurScore { get; set; } = 0;
-    public Role Role {get;set;}
     
     private void Repondre()
     {

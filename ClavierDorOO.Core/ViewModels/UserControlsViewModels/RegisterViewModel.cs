@@ -6,6 +6,8 @@ using Data.Repositories;
 using Models;
 using Models.Factories;
 using Models.Roles;
+using ViewModels.Service;
+using ViewModels.UserControlsViewModels;
 namespace ViewModels.UserControls
 {
     public class RegisterViewModel : BasicViewModel
@@ -42,10 +44,10 @@ namespace ViewModels.UserControls
         {
             Joueur joueur = new Joueur 
             { 
-                Pseudo = this.Pseudo, 
-                Role = RolesFactory.ChoisirRole(this.RoleSelectionne) 
+                Pseudo = this.Pseudo
             };
-            JoueurRepository.AjouterJoueur(joueur);
+            var j = JoueurRepository.EnregistrerEtRecupererJoueur(joueur);
+            NavigationManager.VueCourante = new MainMenuViewModel(j);
         }
         public RegisterViewModel()
         {

@@ -14,6 +14,10 @@
         Width="auto"
         Background = "Gold">
     <Window.Resources>
+        <DataTemplate DataType="{x:Type VMU:LoadPartieUIViewModel}">
+            <Views:LoadPartieUI/>
+        </DataTemplate>
+        
         <DataTemplate DataType="{x:Type VMU:RegisterViewModel}">
             <Views:RegisterUserControl/>
         </DataTemplate>
@@ -28,6 +32,10 @@
         
         <DataTemplate DataType="{x:Type VMU:RulesViewModel}">
             <Views:RulesView />
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type VMU:NouvellePartieRoleUserControlViewModel}">
+            <Views:NouvellePartieRoleUserControl />
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type VMU:NewGameViewModel}">
@@ -44,7 +52,7 @@
     <Grid>
         <ContentControl Content="{Binding VueCourante}" />
         <Button Content="🏠" Command = "{Binding AllerHomeCommand}" Style="{StaticResource BoutonArrondi}" Margin="10,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="auto" Height="auto" Background="#000F56FA" FontSize="28" Foreground="Black" />
-        <StackPanel Orientation="Horizontal" HorizontalAlignment ="Left" VerticalAlignment = "Bottom" Margin="0,0,20,20" Background="Transparent">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment ="Left" VerticalAlignment = "Bottom" Margin ="10,0,0,10" Background="Transparent">
           <Button Content="R u l e s 📋📏" Command="{Binding AllerReglesCommand}" Height="41" FontSize="28" FontFamily="Segoe UI Black" FontWeight="Bold" Background="Transparent" BorderThickness="0" Foreground="Black" />
         </StackPanel>
     </Grid>

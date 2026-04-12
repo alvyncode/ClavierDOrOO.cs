@@ -7,21 +7,65 @@
              mc:Ignorable="d"
              Height="auto" Width="auto">
     <Grid Background="Gold">
-        <TextBlock Text="CLAVIER D'OR"
-                   Margin = "15,80"
-                   FontSize="130"
-                   FontFamily="Segoe UI"
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Height="152"
-                   Width="910"
-                   Grid.Row="0"
-                   TextAlignment="Left"
-                   FontWeight="Bold"/>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="296" Margin="0,0,20,20" Background="Transparent">
-            <Button Content="N e w" Height="40" FontFamily="Segoe UI Black" Command ="{Binding AllerMenuThemeCommand}" FontSize="32" FontWeight="Bold" Background="Transparent" BorderThickness="0" Foreground="Black" HorizontalContentAlignment="Stretch" />
-            <Button Content="L o a d" Height="40" FontFamily="Segoe UI Black" FontSize="32" FontWeight="Bold" Background="Transparent" BorderThickness="0" Foreground="Black" HorizontalContentAlignment="Stretch" />
-            <Button Content="H  i  s  t  o  r  y" FontFamily="Segoe UI Black" Height="41" FontSize="32" FontWeight="Bold" Background="Transparent" BorderThickness="0" Foreground="Black" HorizontalContentAlignment="Stretch" />
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="18,15,60,3">
+            <TextBlock Text="CLAVIER D'OR"
+                       FontSize="130"
+                       FontFamily="Segoe UI"
+                       Height="152"
+                       Width="910"
+                       TextAlignment="Left"
+                       FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Connecté en tant que : "
+                        FontSize="23"/>
+                <TextBlock Text="efrezf"
+                           FontWeight="Bold"
+                        FontSize="23"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,10,10">
+            <Button HorizontalContentAlignment="Left"
+                    FontSize="32"
+                    FontFamily="Segoe UI Black"
+                    FontWeight="Bold"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    Width="250"
+                    HorizontalAlignment="Left"
+                    Content="N e w"
+                    Command="{Binding BoutonNewGame}"
+                    Padding="4"/>
+            <Button HorizontalContentAlignment="Left"
+                    HorizontalAlignment="Left"
+                    FontSize="32"
+                    FontFamily="Segoe UI Black"
+                    FontWeight="Bold"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    Width="250"
+                    Content="L o a d"
+                    Command=""
+                    Padding="4"/>
+            <Button HorizontalContentAlignment="Left"
+                    HorizontalAlignment="Left"
+                    FontSize="32"
+                    FontFamily="Segoe UI Black"
+                    FontWeight="Bold"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    Width="250"
+                    Content="H i s t o r y"
+                    Command=""
+                    Padding="4"/>
         </StackPanel>
         
     </Grid>

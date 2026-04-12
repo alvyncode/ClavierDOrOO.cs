@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using Models;
 namespace Data.Repositories;
 public class JoueurRepository
@@ -13,23 +14,25 @@ public class JoueurRepository
         
         _context = new ClavierDorDbContext(optionsBuilder.Options);
     }
-    public void AjouterJoueur(Joueur joueur)
+    public Joueur EnregistrerEtRecupererJoueur(Joueur joueur)
     {
-        if (joueur.Id == 0)
-        {
-            bool joueurExisteDeja = _context.Joueurs.Any(j => j.Pseudo.ToLower() == joueur.Pseudo.ToLower());
-            if (joueurExisteDeja)
-            {
-                throw new InvalidOperationException("Un joueur avec ce pseudo existe déjà !");
-            }
+        var joueurExistant = _context.Joueurs
+            .FirstOrDefault(j => j.Pseudo.ToLower() == joueur.Pseudo.ToLower());
 
-            _context.Joueurs.Add(joueur);
+        if (joueurExistant != null)
+        {
+            _context.Joueurs.Update(joueurExistant);
+            joueur = joueurExistant; 
         }
         else
         {
-            _context.Joueurs.Update(joueur);
+            _context.Joueurs.Add(joueur);
         }
-        
         _context.SaveChanges();
+        return joueur;
+    }
+    public Joueur TrouverJoueurId(int id)
+    {
+        return _context.Joueurs.FirstOrDefault(j => j.Id == id);
     }
 }

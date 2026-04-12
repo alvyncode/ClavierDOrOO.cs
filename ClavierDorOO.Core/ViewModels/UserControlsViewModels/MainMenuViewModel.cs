@@ -1,37 +1,34 @@
 using System;
 using System.Windows.Input;
 using Command;
+using Data.Repositories;
+using Models;
+using ViewModels.Service;
 
 namespace ViewModels.UserControls
 {
     public class MainMenuViewModel :BasicViewModel
     {
-        private Action _actionNaviguerVersNewGame;
-        private Action _actionNaviguerVersLoad;
-        private Action _actionNaviguerVersHistory;
         public ICommand BoutonNewGame { get;} 
         public ICommand BoutonLoad { get;} 
         public ICommand BoutonHistory { get;}
-        public MainMenuViewModel(Action actionNaviguerNewGame, Action actionNaviguerLoad, Action actionNaviguerHistory)
+        public MainMenuViewModel(Joueur j)
         {
-            _actionNaviguerVersHistory = actionNaviguerHistory;
-            _actionNaviguerVersLoad = actionNaviguerLoad;
-            _actionNaviguerVersNewGame = actionNaviguerNewGame;
-            BoutonNewGame  = new RelayCommand(ExecuterNavigationNewGame);
-            BoutonLoad  = new RelayCommand(ExecuterNavigationLoad);
-            BoutonHistory  = new RelayCommand(ExecuterNavigationHistory);
+            BoutonNewGame = new RelayCommand(_=>ExecuterNavigationNewGame(j));
+            BoutonLoad = new RelayCommand(_=>ExecuterNavigationLoad(j));
+            BoutonHistory = new RelayCommand(_=>ExecuterNavigationHistory(j));
         }
-        private void ExecuterNavigationNewGame()
+        private void ExecuterNavigationNewGame(Joueur j)
         {
-            _actionNaviguerVersNewGame.Invoke();
+            NavigationManager.VueCourante = new NouvellePartieRoleUserControlViewModel(j);
         }
-        private void ExecuterNavigationLoad()
+        private void ExecuterNavigationLoad(Joueur j)
         {
-            _actionNaviguerVersHistory.Invoke();
+            NavigationManager.VueCourante = new LoadPartieUIViewModel();
         }
-        private void ExecuterNavigationHistory()
+        private void ExecuterNavigationHistory(Joueur j)
         {
-            _actionNaviguerVersHistory.Invoke();
+            
         }
     }
 }

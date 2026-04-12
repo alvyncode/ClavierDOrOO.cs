@@ -1,9 +1,8 @@
 using System.Windows.Controls;
-using ViewModels.UserControls;
 namespace Views.UserControls;
-public partial class ThemeMenu :UserControl
+public partial class LoadPartieUI :UserControl
 {
-    public ThemeMenu()
+    public LoadPartieUI()
     {    
         InitializeComponent();
     }

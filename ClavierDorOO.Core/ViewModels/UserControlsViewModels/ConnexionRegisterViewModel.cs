@@ -20,7 +20,7 @@ namespace ViewModels.UserControls
         }
         private void ExecuterNavigationInvite()
         {
-            NavigationManager.VueCourante = new NewGameViewModel();
+            NavigationManager.VueCourante = new ThemeMenuViewModel();
         }
     }
 }

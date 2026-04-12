@@ -39,21 +39,6 @@
                         Padding="15,10,15,10" 
                         Foreground="Black" />
             </Border>
-
-            <TextBlock Text="Rôle" 
-                    FontSize="32"
-                    FontWeight="Bold" 
-                    Margin="0,0,0,10" />
-                    
-            <ComboBox FontSize="32"
-                    Foreground="Black"
-                    Background="#B8FFFFFF"
-                    Height ="60"
-                    ItemsSource="{Binding ListeDesRoles}" 
-                    SelectedItem="{Binding RoleSelectionne}"
-                    Margin="0,0,0,60">
-            </ComboBox>
-
             <Border CornerRadius="15" Background="#E8E7D5" Margin="40,0,0,40" Width ="200" Height ="auto">
                 <Button FontSize="32"
                         Background="Transparent"
@@ -64,7 +49,6 @@
                         HorizontalAlignment = "Center" 
                         Foreground="Black" />
             </Border>
-
         </StackPanel>
     </Grid>
 </UserControl>

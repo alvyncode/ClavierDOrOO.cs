@@ -223,9 +223,9 @@
   },
   {
     "Id": 20,
-    "Intitule": "Quel est le nom du problème célèbre qui consiste à trouver le chemin le plus court passant par toutes les villes une seule fois et revenant au point de départ (NP-Complet) ?",
+    "Intitule": "Question Boss : Quel est le nom du problème célèbre qui consiste à trouver le chemin le plus court passant par toutes les villes une seule fois et revenant au point de départ (NP-Complet) ?",
     "Theme":1,
-    "TypeDeQuestion": 3,
+    "TypeDeQuestion": 1,
     "Options": null,
     "Reponse": "Le problème du voyageur de commerce",
     "Indice": "Traveling Salesman Problem. C'est un problème d'optimisation combinatoire très difficile."
@@ -470,7 +470,7 @@
     "Id": 40,
     "Intitule": "Question Boss : Quelle est la forme correcte ? 'It's high time he ___ to bed.'",
     "Theme": 2,
-    "TypeDeQuestion": 3,
+    "TypeDeQuestion": 2,
     "Options": {
       "Option1": "go",
       "Option2": "goes",
@@ -720,7 +720,7 @@
     "Id": 60,
     "Intitule": "Question Boss : Vous avez 3 boîtes. Une contient deux lingots d'or, une contient deux lingots d'argent, et la troisième contient un or et un argent. Les étiquettes sont toutes fausses. Vous tirez un lingot d'une boîte : c'est de l'or. Quelle est la probabilité que le second lingot de cette même boîte soit aussi de l'or ?",
     "Theme": 3,
-    "TypeDeQuestion": 3,
+    "TypeDeQuestion": 2,
     "Options": {
       "Option1": "50% (1/2)",
       "Option2": "33% (1/3)",
@@ -950,7 +950,7 @@
     "Id": 80,
     "Intitule": "Question Boss : Qui a refusé le prix Nobel de littérature en 1964 ?",
     "Theme": 4,
-    "TypeDeQuestion": 3,
+    "TypeDeQuestion": 2,
     "Options": {
       "Option1": "Albert Camus",
       "Option2": "Jean-Paul Sartre",
@@ -1180,7 +1180,7 @@
     "Id": 100,
     "Intitule": "Question Boss : Quel rôle dans la cybersécurité supervise le centre des opérations de sécurité (SOC) ?",
     "Theme": 5,
-    "TypeDeQuestion": 3,
+    "TypeDeQuestion": 2,
     "Options": {
       "Option1": "SOC Analyst",
       "Option2": "CISO / RSSI",

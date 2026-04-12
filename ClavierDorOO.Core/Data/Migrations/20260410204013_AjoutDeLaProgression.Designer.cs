@@ -3,6 +3,7 @@ using System;
 using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ClavierDorDbContext))]
-    partial class ClavierDorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260410204013_AjoutDeLaProgression")]
+    partial class AjoutDeLaProgression
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +35,12 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("Joueurs");
                 });
@@ -96,14 +104,9 @@ namespace Data.Migrations
                     b.Property<int>("ProgessionMDI")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("JoueurId");
-
-                    b.HasIndex("RoleId");
 
                     b.ToTable("Parties");
                 });
@@ -203,6 +206,17 @@ namespace Data.Migrations
                     b.HasDiscriminator().HasValue("DeveloppeurMobile");
                 });
 
+            modelBuilder.Entity("Models.Joueur", b =>
+                {
+                    b.HasOne("Models.Roles.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+                });
+
             modelBuilder.Entity("Models.Options", b =>
                 {
                     b.HasOne("Models.Question", null)
@@ -220,15 +234,7 @@ namespace Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Models.Roles.Role", "Role")
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Joueur");
-
-                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("Models.Score", b =>
