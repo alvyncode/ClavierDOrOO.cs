@@ -39,16 +39,15 @@
                         Padding="15,10,15,10" 
                         Foreground="Black" />
             </Border>
-            <Border CornerRadius="15" Background="#E8E7D5" Margin="40,0,0,40" Width ="200" Height ="auto">
-                <Button FontSize="32"
-                        Background="Transparent"
-                        Padding="15,10,15,10" 
-                        Width = "200"
-                        Content = "Confimer"
-                        Command = "{ Binding ConfirmerPseudoRole}"
-                        HorizontalAlignment = "Center" 
-                        Foreground="Black" />
-            </Border>
+            <Button FontSize="32"
+                    Background="#FFF4FFF4"
+                    Padding="15,10,15,10" 
+                    Width = "200"
+                    Content = "Confimer"
+                    Command = "{ Binding ConfirmerPseudoRole}"
+                    HorizontalAlignment = "Center" 
+                    Foreground="Black"
+                    Style="{StaticResource BoutonArrondi}" />
         </StackPanel>
     </Grid>
 </UserControl>

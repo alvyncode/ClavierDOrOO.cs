@@ -2,6 +2,8 @@ using Models;
 using Microsoft.EntityFrameworkCore;
 using Models.Factories;
 using Models.Enums;
+using System.Reflection.Metadata.Ecma335;
+using Data.Service;
 namespace Data.Repositories;
 public class PartieRepository
 {
@@ -26,20 +28,38 @@ public class PartieRepository
         _context.Parties.Add(partie);
         _context.SaveChanges();   
     }
-    public List<Partie> ListeDesParties(Joueur joueur)
-{
-    if (joueur == null)
+    public List<PartieDto> ListeDesParties(Joueur joueur)
     {
-        return new List<Partie>(); 
+
+        if (joueur == null) return new List<PartieDto>();
+
+        return _context.Parties
+            .AsNoTracking()
+            .Where(p => EF.Property<int>(p, "JoueurId") == joueur.Id)
+            .Select(p => new PartieDto
+            {
+                Id = p.Id,
+                NomDeLaPartie = p.Nom,
+                Score = p.Scores.Sum(s => s.ValeurDuScore),
+                Progression = p.ProgessionAlgo + 
+                            p.ProgessionAnglais + 
+                            p.ProgessionLogique+ 
+                            p.ProgessionCultureG+
+                            p.ProgessionMDI
+            })
+            .ToList();
     }
-    return _context.Parties
-                   .AsNoTracking()
-                   .Where(p => EF.Property<int>(p, "JoueurId") == joueur.Id) 
-                   .ToList();
-}
-    public Partie LoadGame(Joueur joueur, int id)
+    public Partie LoadGame(Joueur joueur, string nomDeLaPartie)
     {
-        return _context.Parties.FirstOrDefault(p => p.Id == id && p.Joueur.Id == joueur.Id);
+        var Partie = _context.Parties.FirstOrDefault(p => p.Nom == nomDeLaPartie && p.Joueur.Id == joueur.Id);
+        if (Partie != null)
+        {
+            return Partie;
+        }
+        else
+        {
+            throw new NullReferenceException("Inexistant");
+        }
 
     }
     public Partie DernierePartieEnregistré()
@@ -87,5 +107,17 @@ public class PartieRepository
     {
         var score = partie.Scores.FirstOrDefault(s=>s.Theme == theme);
         score.ValeurDuScore = scoreCourant;
+    }
+    public List<int> TrouverProgression(Partie p)
+    {
+        var progression = new List<int>
+        {
+            p.ProgessionAlgo,
+            p.ProgessionAnglais,
+            p.ProgessionLogique,
+            p.ProgessionCultureG,
+            p.ProgessionMDI
+        };
+        return progression;
     }
 }

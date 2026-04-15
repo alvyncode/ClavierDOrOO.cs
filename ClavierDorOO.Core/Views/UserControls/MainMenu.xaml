@@ -21,7 +21,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Connecté en tant que : "
                         FontSize="23"/>
-                <TextBlock Text="efrezf"
+                <TextBlock Text="{Binding PseudoDernierJoueur}"
                            FontWeight="Bold"
                         FontSize="23"/>
             </StackPanel>
@@ -52,7 +52,7 @@
                     Foreground="Black"
                     Width="250"
                     Content="L o a d"
-                    Command=""
+                    Command="{Binding BoutonLoad}"
                     Padding="4"/>
             <Button HorizontalContentAlignment="Left"
                     HorizontalAlignment="Left"
@@ -64,7 +64,7 @@
                     Foreground="Black"
                     Width="250"
                     Content="H i s t o r y"
-                    Command=""
+                    Command="{Binding BoutonHistory}"
                     Padding="4"/>
         </StackPanel>
         

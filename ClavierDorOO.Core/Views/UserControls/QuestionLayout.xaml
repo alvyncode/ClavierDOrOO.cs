@@ -29,6 +29,15 @@
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"
                     Margin="0,10,15,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Score : "
+                           FontWeight="bold"
+                           FontSize="32"
+                           VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Score}"
+                           FontSize="32"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
             <Button Content="S a v e 💾"
                     Command="{Binding BoutonSave}"
                     Height="41"
@@ -39,15 +48,6 @@
                     BorderThickness="0"
                     Foreground="Black"
                     Margin="0,8" />
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Score : "
-                           FontWeight="bold"
-                           FontSize="32"
-                           VerticalAlignment="Center"/>
-                <TextBlock Text="{Binding Score}"
-                           FontSize="32"
-                           VerticalAlignment="Center"/>
-            </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="0"
                     Margin="20"

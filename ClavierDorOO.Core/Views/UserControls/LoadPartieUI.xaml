@@ -8,6 +8,38 @@
              Height="auto"
              Width="auto">
     <Grid>
-<TextBlock Text="Avec Nyamen pas besoin d'horoscope" VerticalAlignment="Center"/>
+       <TextBlock Text="CLAVIER D'OR"
+        FontSize="130"
+        Margin = "18,15,60,3"
+        FontFamily="Segoe UI"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Height="152"
+        Width="910"
+        Grid.Row="0"
+        TextAlignment="Left"
+        FontWeight="Bold"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment ="Center" Margin="0,60" Width= "700">    
+                <Label Content="Nom de la Partie" FontSize="32"
+                FontWeight="Bold" 
+                Margin="0,0,0,10"/>
+                <Border CornerRadius="15" Background="White" Margin="0,0,0,40">
+                        <TextBox FontSize="32"
+                                Text="{Binding NomDeLaPartie}" 
+                                Background="Transparent" 
+                                BorderThickness="0" 
+                                Padding="15,10,15,10" 
+                                Foreground="Black" />
+                </Border>
+                <Button FontSize="32"
+                        Background="#FFF4FFF4"
+                        Padding="15,10,15,10" 
+                        Width = "200"
+                        Content = "Confimer"
+                        Command = "{Binding BoutonConfirmer}"
+                        HorizontalAlignment = "Center" 
+                        Foreground="Black"
+                        Style="{StaticResource BoutonArrondi}"/>
+        </StackPanel>
     </Grid>
 </UserControl>

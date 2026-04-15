@@ -1,0 +1,89 @@
+<UserControl x:Class="Views.UserControls.HistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Views.UserControls"
+             mc:Ignorable="d"
+             Height="auto" Width="auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="18,15,60,3"
+                    Grid.Row = "0">
+            <TextBlock Text="CLAVIER D'OR"
+                       FontSize="130"
+                       FontFamily="Segoe UI"
+                       Height="152"
+                       Width="910"
+                       TextAlignment="Left"
+                       FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Connecté en tant que : "
+                        FontSize="23"/>
+                <TextBlock Text="{Binding PseudoDernierJoueur}"
+                           FontWeight="Bold"
+                        FontSize="23"/>
+            </StackPanel>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row ="1">
+            <StackPanel x:Name="TableContainer">                
+                <ItemsControl ItemsSource="{Binding ListeDesParties}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,0,0,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0" Width="80" Height="80" CornerRadius="20" Background="#FFF8E1">
+                                    <TextBlock Text="{Binding Id}" 
+                                            FontSize="30" FontWeight="Bold" 
+                                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+
+                                <Border Grid.Column="2" Height="80" CornerRadius="20" Background="#FFF8E1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="1.5*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                                            <TextBlock Text="Nom de la partie" FontSize="12" Foreground="Gray" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="{Binding NomDeLaPartie}" FontSize="18" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                            <TextBlock Text="Progression totale" FontSize="12" Foreground="Gray" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="{Binding Progression, StringFormat={}{0}%}" FontSize="18" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                                            <TextBlock Text="Score total" FontSize="12" Foreground="Gray" HorizontalAlignment="Center"/>
+                                            <TextBlock Text="{Binding Score, StringFormat={}{0:N0}}" FontSize="18" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                
+                </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

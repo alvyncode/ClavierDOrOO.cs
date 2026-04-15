@@ -79,6 +79,15 @@ namespace ViewModels.UserControls
             ChargerQuestionBDD();
             AfficherLesQuestions(partie);
         }
+        public QuestionLayoutViewModel(Theme themeChoisi, Partie partie,Joueur j,int progression)
+        {
+            _indexActuel = progression;
+            BoutonSave = new RelayCommand(_=>Save(partie));
+            NewJoueur = j;
+            ThemeQuestion = themeChoisi;
+            ChargerQuestionBDD();
+            AfficherLesQuestions(partie);
+        }
         public void ChargerQuestionBDD()
         {
             var RepoQuestion = new QuestionRepository();

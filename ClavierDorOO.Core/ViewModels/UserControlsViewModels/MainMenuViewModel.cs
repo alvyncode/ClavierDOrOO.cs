@@ -9,6 +9,7 @@ namespace ViewModels.UserControls
 {
     public class MainMenuViewModel :BasicViewModel
     {
+        public string PseudoDernierJoueur { get; set; }
         public ICommand BoutonNewGame { get;} 
         public ICommand BoutonLoad { get;} 
         public ICommand BoutonHistory { get;}
@@ -17,6 +18,7 @@ namespace ViewModels.UserControls
             BoutonNewGame = new RelayCommand(_=>ExecuterNavigationNewGame(j));
             BoutonLoad = new RelayCommand(_=>ExecuterNavigationLoad(j));
             BoutonHistory = new RelayCommand(_=>ExecuterNavigationHistory(j));
+            PseudoDernierJoueur = j.Pseudo;
         }
         private void ExecuterNavigationNewGame(Joueur j)
         {
@@ -24,11 +26,11 @@ namespace ViewModels.UserControls
         }
         private void ExecuterNavigationLoad(Joueur j)
         {
-            NavigationManager.VueCourante = new LoadPartieUIViewModel();
+            NavigationManager.VueCourante = new LoadPartieUIViewModel(j);
         }
         private void ExecuterNavigationHistory(Joueur j)
         {
-            
+            NavigationManager.VueCourante = new HistoryViewModel(j);
         }
     }
 }

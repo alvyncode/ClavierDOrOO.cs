@@ -45,9 +45,15 @@
         <DataTemplate DataType="{x:Type VMU:ConnexionRegisterViewModel}">
             <Views:ConnexionRegisterUserControl/>
         </DataTemplate>
+
         <DataTemplate DataType="{x:Type VMU:QuestionLayoutViewModel}">
             <Views:QuestionLayout/>
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type VMU:HistoryViewModel}">
+            <Views:HistoryView/>
+        </DataTemplate>
+
     </Window.Resources>
     <Grid>
         <ContentControl Content="{Binding VueCourante}" />
