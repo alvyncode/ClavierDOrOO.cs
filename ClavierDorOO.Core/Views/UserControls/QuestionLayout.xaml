@@ -59,6 +59,28 @@
                     Foreground="Black"
                     Margin="0,8"
                     Visibility="{Binding DevMobile, Converter={StaticResource BoolToVis} }"/>
+            <Button Content="⏭️"
+                    Command="{Binding BoutonSuivant}"
+                    Height="41"
+                    FontSize="28"
+                    FontFamily="Segoe UI Black"
+                    FontWeight="Bold"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    Margin="0,8"
+                    Visibility="{Binding DevFront, Converter={StaticResource BoolToVis} }"/>
+            <Button Content="🔄️"
+                    Command="{Binding BoutonReload}"
+                    Height="41"
+                    FontSize="28"
+                    FontFamily="Segoe UI Black"
+                    FontWeight="Bold"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    Margin="0,8"
+                    Visibility="{Binding DevBack, Converter={StaticResource BoolToVis} }"/>
         </StackPanel>
         <StackPanel Grid.Row="0"
                     Margin="20"

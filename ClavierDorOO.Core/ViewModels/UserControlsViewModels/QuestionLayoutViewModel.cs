@@ -23,14 +23,26 @@ namespace ViewModels.UserControls
             set { _devMobile = value; OnPropertyChanged(); }
         }
         
+        private bool _devFront;
+        public bool DevFront
+        {
+            get { return _devFront; }
+            set { _devFront = value; OnPropertyChanged(); }
+        }
+        
+        private bool _devBack;
+        public bool DevBack
+        {
+            get { return _devBack; }
+            set { _devBack = value;OnPropertyChanged(); }
+        }
+        
         private bool _indiceVisible = false;
         public bool IndiceVisible
         {
             get { return _indiceVisible; }
             set { _indiceVisible = value; OnPropertyChanged();}
         }
-        public bool DevFront { get; set; } = false;
-        public bool DevBack { get; set; } = false;
         private bool _verificationEnCours = false;
         private List<Question> ? ToutesLesQuestions { get; set; }
         private int _score = 0 ;
@@ -71,7 +83,13 @@ namespace ViewModels.UserControls
             get { return _bonneReponse; }
             set { _bonneReponse = value;OnPropertyChanged(); }
         }
-        public int _indexActuel = 0;
+        private int _indexActuel;
+        public int IndexActuel
+        {
+            get { return _indexActuel; }
+            set { _indexActuel = value;OnPropertyChanged(); }
+        }
+        
         public Theme ThemeQuestion { get; set; }
         private string _intituleDelaQuestion;
         public string ? IntituleDelaQuestion {
@@ -91,9 +109,24 @@ namespace ViewModels.UserControls
             get { return _indice; }
             set { _indice = value; OnPropertyChanged();}
         }
+        private int _suivantCount;
+        public int SuivantCount
+        {
+            get { return _suivantCount; }
+            set { _suivantCount = value;OnPropertyChanged(); }
+        }
+        
+        private int _reloadCount;
+        public int ReloadCount
+        {
+            get { return _reloadCount; }
+            set { _reloadCount = value; }
+        }
         
         public RelayCommand BoutonSave {get;}
         public RelayCommand BoutonIndice { get;}
+        public RelayCommand BoutonSuivant { get; }
+        public RelayCommand BoutonReload { get;}
         public Joueur NewJoueur { get; set; }
         public QuestionLayoutViewModel(Theme themeChoisi)
         {
@@ -109,7 +142,17 @@ namespace ViewModels.UserControls
             {
                 DevMobile = true;
             }
+            else if(Role is DeveloppeurFront)
+            {
+                DevFront = true;
+            }
+            else if (Role is DeveloppeurBack)
+            {
+                DevBack = true;
+            }
             BoutonIndice = new RelayCommand(AfficherIndice);
+            BoutonSuivant = new RelayCommand(PasserSuivant);
+            BoutonReload  = new RelayCommand(Reload);
             NewJoueur = j;
             ThemeQuestion = themeChoisi;
             ChargerQuestionBDD();
@@ -117,14 +160,24 @@ namespace ViewModels.UserControls
         }
         public QuestionLayoutViewModel(Theme themeChoisi, Partie partie,Joueur j,int progression)
         {
-            _indexActuel = progression;
+            IndexActuel = progression;
             BoutonSave = new RelayCommand(_=>Save(partie));
             var Role = partie.Role;
             if (Role is DeveloppeurMobile)
             {
                 DevMobile = true;
             }
+            else if(Role is DeveloppeurFront)
+            {
+                DevFront = true;
+            }
+            else if (Role is DeveloppeurBack)
+            {
+                DevBack = true;
+            }
             BoutonIndice = new RelayCommand(AfficherIndice);
+            BoutonSuivant = new RelayCommand(PasserSuivant);
+            BoutonReload  = new RelayCommand(Reload);
             NewJoueur = j;
             ThemeQuestion = themeChoisi;
             ChargerQuestionBDD();
@@ -137,31 +190,31 @@ namespace ViewModels.UserControls
         }
         public void AfficherLesQuestions()
         {
-            if(_indexActuel==19) {IntituleColor ="Red";}
+            if(IndexActuel==19) {IntituleColor ="Red";}
             else{IntituleColor ="yellow";}
 
-            Indice = ToutesLesQuestions[_indexActuel].Indice;
-            IntituleDelaQuestion = ToutesLesQuestions[_indexActuel].Intitule;
-            if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
+            Indice = ToutesLesQuestions[IndexActuel].Indice;
+            IntituleDelaQuestion = ToutesLesQuestions[IndexActuel].Intitule;
+            if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
             {
-                VueQCMouOption = new OptionQuestionLayoutViewModel(ToutesLesQuestions[_indexActuel].OptionsProposees, VerifierReponse);
+                VueQCMouOption = new OptionQuestionLayoutViewModel(ToutesLesQuestions[IndexActuel].OptionsProposees, VerifierReponse);
             }
-            else if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
+            else if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
             {
                 VueQCMouOption = new OpenQuestionLayoutViewModel(VerifierReponse);
             }
         }
         public void AfficherLesQuestions(Partie p)
         {
-            if(_indexActuel==19) {IntituleColor ="Red";}
+            if(IndexActuel==19) {IntituleColor ="Red";}
             else{IntituleColor ="yellow";}
-            Indice = ToutesLesQuestions[_indexActuel].Indice;
-            IntituleDelaQuestion = ToutesLesQuestions[_indexActuel].Intitule;
-            if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
+            Indice = ToutesLesQuestions[IndexActuel].Indice;
+            IntituleDelaQuestion = ToutesLesQuestions[IndexActuel].Intitule;
+            if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
             {
-                VueQCMouOption = new OptionQuestionLayoutViewModel(ToutesLesQuestions[_indexActuel].OptionsProposees, (texteDuBouton) => { VerifierReponse(texteDuBouton,p); });
+                VueQCMouOption = new OptionQuestionLayoutViewModel(ToutesLesQuestions[IndexActuel].OptionsProposees, (texteDuBouton) => { VerifierReponse(texteDuBouton,p); });
             }
-            else if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
+            else if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
             {
                 VueQCMouOption = new OpenQuestionLayoutViewModel((text) => { VerifierReponse(text,p); });
             }
@@ -172,19 +225,19 @@ namespace ViewModels.UserControls
             if (_verificationEnCours) return;
             _verificationEnCours = true;
             string repUser = reponseUtilisateur?.ToLower().Trim() ?? "".Replace(" ", "");
-            string repAttendue = ToutesLesQuestions[_indexActuel].Reponse?.ToLower().Trim() ?? "".Replace(" ", "");
-            BonneReponse = ToutesLesQuestions[_indexActuel].Reponse;
+            string repAttendue = ToutesLesQuestions[IndexActuel].Reponse?.ToLower().Trim() ?? "".Replace(" ", "");
+            BonneReponse = ToutesLesQuestions[IndexActuel].Reponse;
             if(repUser.Contains(repAttendue) && repAttendue != "")
             {
-                if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
+                if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
                 {
                 Score+=3;
                 }
-                else if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
+                else if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
                 {
                     Score+=1;
                 }
-                else if (_indexActuel == 20) {Score+=5;}
+                else if (IndexActuel == 20) {Score+=5;}
                 MessageFeedback = $"Bonne Réponse !";
                 MessageFeedbackColor = "#4CAF50";
             }
@@ -197,8 +250,8 @@ namespace ViewModels.UserControls
 
             await Task.Delay(1700);
             IsMessageVisible = false;
-            _indexActuel++;   
-            if (_indexActuel < 20)
+            IndexActuel++;   
+            if (IndexActuel < 20)
             {
             AfficherLesQuestions(); 
             }
@@ -214,19 +267,19 @@ namespace ViewModels.UserControls
             if (_verificationEnCours) return;
             _verificationEnCours = true;
             string repUser = reponseUtilisateur?.ToLower().Trim() ?? "".Replace(" ", "");
-            string repAttendue = ToutesLesQuestions[_indexActuel].Reponse?.ToLower().Trim() ?? "".Replace(" ", "");
-            BonneReponse = ToutesLesQuestions[_indexActuel].Reponse;
+            string repAttendue = ToutesLesQuestions[IndexActuel].Reponse?.ToLower().Trim() ?? "".Replace(" ", "");
+            BonneReponse = ToutesLesQuestions[IndexActuel].Reponse;
             if(repUser.Contains(repAttendue) && repAttendue != "")
             {
-                if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
+                if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OpenQuestion)
                 {
                 Score+=3;
                 }
-                else if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
+                else if(ToutesLesQuestions[IndexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
                 {
                     Score+=1;
                 }
-                else if (_indexActuel == 20) {Score+=5;}
+                else if (IndexActuel == 20) {Score+=5;}
                 MessageFeedback = $"Bonne Réponse !";
                 MessageFeedbackColor = "#4CAF50";
             }
@@ -239,9 +292,9 @@ namespace ViewModels.UserControls
 
             await Task.Delay(1700);
             IsMessageVisible = false;
-            _indexActuel++;
+            IndexActuel++;
 
-            if (_indexActuel < 20)
+            if (IndexActuel < 20)
             {
             AfficherLesQuestions(); 
             }
@@ -254,7 +307,7 @@ namespace ViewModels.UserControls
         public void Save(Partie partie)
         {
             AccessPartie.EnregistrerUnScore(partie,_score,ThemeQuestion);
-            AccessPartie.EnregisterUneProgression(partie, ThemeQuestion,_indexActuel);
+            AccessPartie.EnregisterUneProgression(partie, ThemeQuestion,IndexActuel);
         }
         public void AfficherIndice()
         {
@@ -266,6 +319,37 @@ namespace ViewModels.UserControls
             else
             {
                 IndiceVisible = false;
+                DevMobile = false;
+            }
+        }
+        public void PasserSuivant()
+        {
+            SuivantCount++;
+            if(SuivantCount<= 5)
+            {
+                IndexActuel++;
+                AfficherLesQuestions();
+            }
+            else
+            {
+                DevFront = false;
+            }
+        }
+        public void Reload()
+        {
+            ReloadCount++;
+            if(ReloadCount<= 5 && IndexActuel != 0)
+            {
+                IndexActuel--;
+                AfficherLesQuestions();
+            }
+            else if (IndexActuel == 0)
+            {
+                
+            }
+            else
+            {
+                DevBack = false;
             }
         }
     }
