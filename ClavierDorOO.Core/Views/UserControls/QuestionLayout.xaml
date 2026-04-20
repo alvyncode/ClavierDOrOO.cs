@@ -47,7 +47,18 @@
                     Background="Transparent"
                     BorderThickness="0"
                     Foreground="Black"
-                    Margin="0,8" />
+                    Margin="0,8"/>
+            <Button Content="💡"
+                    Command="{Binding BoutonIndice}"
+                    Height="41"
+                    FontSize="28"
+                    FontFamily="Segoe UI Black"
+                    FontWeight="Bold"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Black"
+                    Margin="0,8"
+                    Visibility="{Binding DevMobile, Converter={StaticResource BoolToVis} }"/>
         </StackPanel>
         <StackPanel Grid.Row="0"
                     Margin="20"
@@ -83,6 +94,16 @@
                     </StackPanel>
 
                 </StackPanel>
+            </Border>
+            <Border Background="Gray"
+                    CornerRadius="10"
+                    Padding="20"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="{Binding IndiceVisible, Converter={StaticResource BoolToVis}}">
+                <TextBlock Text="{Binding Indice}"
+                        FontSize="32"
+                        FontWeight="Bold"/>
             </Border>
             <TextBlock Text="{Binding ThemeQuestion}"
                        FontSize="32"

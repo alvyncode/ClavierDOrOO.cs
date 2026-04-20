@@ -4,6 +4,7 @@ using Models.Factories;
 using Models.Enums;
 using System.Reflection.Metadata.Ecma335;
 using Data.Service;
+using Models.Roles;
 namespace Data.Repositories;
 public class PartieRepository
 {
@@ -51,7 +52,10 @@ public class PartieRepository
     }
     public Partie LoadGame(Joueur joueur, string nomDeLaPartie)
     {
-        var Partie = _context.Parties.FirstOrDefault(p => p.Nom == nomDeLaPartie && p.Joueur.Id == joueur.Id);
+        var Partie = _context.Parties
+        .Include(p => p.Role)
+        .Include(p => p.Scores)
+        .FirstOrDefault(p => p.Nom == nomDeLaPartie && p.Joueur.Id == joueur.Id);
         if (Partie != null)
         {
             return Partie;
@@ -75,7 +79,7 @@ public class PartieRepository
         }
         ;
     }
-    public void EnregisterUneProgression(Partie partie, Theme theme,int progression)
+    public async Task EnregisterUneProgression(Partie partie, Theme theme,int progression)
     {
         switch (theme)
         {
@@ -102,6 +106,7 @@ public class PartieRepository
         }
         _context.Parties.Update(partie);
         _context.SaveChanges();
+        await Task.Delay(1800);
     }
     public void EnregistrerUnScore(Partie partie, int scoreCourant, Theme theme)
     {
@@ -119,5 +124,9 @@ public class PartieRepository
             p.ProgessionMDI
         };
         return progression;
+    }
+    public Role TrouverRole (Partie p)
+    {
+        return _context.Parties.FirstOrDefault(partie=>partie.Nom == p.Nom).Role;
     }
 }

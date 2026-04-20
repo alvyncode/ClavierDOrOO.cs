@@ -3,11 +3,34 @@ using Command;
 using Data.Repositories;
 using Models;
 using Models.Enums;
+using Models.Roles;
 
 namespace ViewModels.UserControls
 {
     public class QuestionLayoutViewModel :BasicViewModel
     {
+        private int _indiceCount = 0;
+        public int IndiceCount
+        {
+            get { return _indiceCount; }
+            set { _indiceCount = value;OnPropertyChanged(); }
+        }
+        
+        private bool _devMobile;
+        public bool DevMobile
+        {
+            get { return _devMobile; }
+            set { _devMobile = value; OnPropertyChanged(); }
+        }
+        
+        private bool _indiceVisible = false;
+        public bool IndiceVisible
+        {
+            get { return _indiceVisible; }
+            set { _indiceVisible = value; OnPropertyChanged();}
+        }
+        public bool DevFront { get; set; } = false;
+        public bool DevBack { get; set; } = false;
         private bool _verificationEnCours = false;
         private List<Question> ? ToutesLesQuestions { get; set; }
         private int _score = 0 ;
@@ -48,7 +71,6 @@ namespace ViewModels.UserControls
             get { return _bonneReponse; }
             set { _bonneReponse = value;OnPropertyChanged(); }
         }
-        
         public int _indexActuel = 0;
         public Theme ThemeQuestion { get; set; }
         private string _intituleDelaQuestion;
@@ -63,7 +85,15 @@ namespace ViewModels.UserControls
             get { return _vueQCMouOption; }
             set { _vueQCMouOption = value; OnPropertyChanged();}
         }
+        private string _indice;
+        public string Indice
+        {
+            get { return _indice; }
+            set { _indice = value; OnPropertyChanged();}
+        }
+        
         public RelayCommand BoutonSave {get;}
+        public RelayCommand BoutonIndice { get;}
         public Joueur NewJoueur { get; set; }
         public QuestionLayoutViewModel(Theme themeChoisi)
         {
@@ -74,6 +104,12 @@ namespace ViewModels.UserControls
         public QuestionLayoutViewModel(Theme themeChoisi, Partie partie,Joueur j)
         {
             BoutonSave = new RelayCommand(_=>Save(partie));
+            var Role = partie.Role;
+            if (Role is DeveloppeurMobile)
+            {
+                DevMobile = true;
+            }
+            BoutonIndice = new RelayCommand(AfficherIndice);
             NewJoueur = j;
             ThemeQuestion = themeChoisi;
             ChargerQuestionBDD();
@@ -83,6 +119,12 @@ namespace ViewModels.UserControls
         {
             _indexActuel = progression;
             BoutonSave = new RelayCommand(_=>Save(partie));
+            var Role = partie.Role;
+            if (Role is DeveloppeurMobile)
+            {
+                DevMobile = true;
+            }
+            BoutonIndice = new RelayCommand(AfficherIndice);
             NewJoueur = j;
             ThemeQuestion = themeChoisi;
             ChargerQuestionBDD();
@@ -98,6 +140,7 @@ namespace ViewModels.UserControls
             if(_indexActuel==19) {IntituleColor ="Red";}
             else{IntituleColor ="yellow";}
 
+            Indice = ToutesLesQuestions[_indexActuel].Indice;
             IntituleDelaQuestion = ToutesLesQuestions[_indexActuel].Intitule;
             if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
             {
@@ -112,7 +155,7 @@ namespace ViewModels.UserControls
         {
             if(_indexActuel==19) {IntituleColor ="Red";}
             else{IntituleColor ="yellow";}
-
+            Indice = ToutesLesQuestions[_indexActuel].Indice;
             IntituleDelaQuestion = ToutesLesQuestions[_indexActuel].Intitule;
             if(ToutesLesQuestions[_indexActuel].TypeDeQuestion == TypeDeQuestion.OptionQuestion)
             {
@@ -125,6 +168,7 @@ namespace ViewModels.UserControls
         }
         public async void VerifierReponse(string reponseUtilisateur)
         {
+            IndiceVisible = false;
             if (_verificationEnCours) return;
             _verificationEnCours = true;
             string repUser = reponseUtilisateur?.ToLower().Trim() ?? "".Replace(" ", "");
@@ -166,6 +210,7 @@ namespace ViewModels.UserControls
         }
         public async void VerifierReponse(string reponseUtilisateur, Partie partie)
         {
+            IndiceVisible = false;
             if (_verificationEnCours) return;
             _verificationEnCours = true;
             string repUser = reponseUtilisateur?.ToLower().Trim() ?? "".Replace(" ", "");
@@ -210,6 +255,18 @@ namespace ViewModels.UserControls
         {
             AccessPartie.EnregistrerUnScore(partie,_score,ThemeQuestion);
             AccessPartie.EnregisterUneProgression(partie, ThemeQuestion,_indexActuel);
+        }
+        public void AfficherIndice()
+        {
+            IndiceCount++;
+            if (IndiceCount <= 3)
+            {
+                IndiceVisible = true;
+            }
+            else
+            {
+                IndiceVisible = false;
+            }
         }
     }
 }
